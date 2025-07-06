@@ -29,17 +29,12 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* GTranslate widget'ının navbar içinde düzgün görünmesi için */
         .gtranslate_wrapper {
-            /* GTranslate'in varsayılan konumlandırmasını geçersiz kılmak için */
-            position: static !important;
-            float: none !important;
-            display: inline-block; /* Menü öğeleri gibi yanyana durması için */
-            vertical-align: middle; /* Metinle dikey hizalamak için */
-            padding: 0 !important; /* İç boşluğu sıfırla */
-            margin: 0 !important; /* Marjinleri sıfırla */
+            position: fixed !important;
+            top: 10px;
+            right: 10px;
+            z-index: 9999;
         }
-
         /* GTranslate'in oluşturduğu select kutusu ve bayrakları için */
         .goog-te-gadget-simple {
             background-color: transparent !important; /* Arka planı şeffaf yap */
@@ -70,16 +65,21 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
+    <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand" href="index.html">
             <img src="images/icon.png" alt="Moda Fryzjer & Beauty Logo"
                  style="height: 2.5em; vertical-align: middle; filter: brightness(1.5);">
             Moda Fryzjer & Beauty
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
+
+        <div class="d-flex align-items-center">
+            <div class="gtranslate_wrapper mr-3"></div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+        </div>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
@@ -88,10 +88,6 @@
                 <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-
-                <li class="nav-item">
-                    <div class="gtranslate_wrapper" style="margin-left: 15px;"></div>
-                </li>
             </ul>
         </div>
     </div>
