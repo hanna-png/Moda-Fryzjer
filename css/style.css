@@ -8479,40 +8479,7 @@ h3.vr {
   color: black;
   font-family: "Barlow Condensed", sans-serif;
 }
-@media (max-width: 768px) { /*1199.98*/
-  h3.vr {
-    opacity: 0;
-    display: none;
-  }
-  .navbar-brand {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-  .js-fullheight {
-    height: auto !important;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-    .hero-wrap .text img {
-    max-width: 120px;
-    margin-bottom: 1rem;
-  }
-  .hero-wrap .text h1 {
-    font-size: 1.5rem;
-  }
 
-  .hero-wrap .text .subheading {
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-wrap .btn {
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-}
 
 .appointment-wrap {
   text-align: center;
