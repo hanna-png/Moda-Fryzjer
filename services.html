@@ -29,45 +29,60 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        @media (max-width: 768px) { /*1199.98*/
-            h3.vr {
-                opacity: 0;
-                display: none;
-            }
-            .navbar-brand {
-                font-size: 1rem;
-                white-space: nowrap;
-            }
-            .js-fullheight {
-                height: auto !important;
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-                .hero-wrap .text img {
-                max-width: 120px;
-                margin-bottom: 1rem;
-            }
-            .hero-wrap .text h1 {
-                font-size: 1.5rem;
-            }
-
-            .hero-wrap .text .subheading {
-                font-size: 1rem;
-                display: block;
-                margin-bottom: 0.5rem;
-            }
-
-            .hero-wrap .btn {
-                padding: 0.5rem 1.5rem;
-                font-size: 1rem;
-                width: 100%;
-            }
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+        /* Görsel başlık (h3.vr) gizleniyor */
+        h3.vr {
+            display: none;
+            opacity: 0;
         }
-        .gtranslate_wrapper {
-            position: fixed !important;
-            top: 10px;
-            right: 10px;
-            z-index: 9999;
+
+        /* Navbar markası daha küçük ve tek satıra sığar */
+        .navbar-brand {
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        /* Sayfa yüksekliği optimize edildi */
+        .js-fullheight {
+            min-height: 100dvh; /* height yerine min-height */
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Hero alanı – logo görseli */
+        .hero-wrap .text img {
+            max-width: 120px;
+            margin-bottom: 1rem;
+        }
+
+        /* Hero başlık yazısı */
+        .hero-wrap .text h1 {
+            font-size: clamp(1.3rem, 5vw, 1.8rem);
+        }
+
+        /* Hero alt başlık */
+        .hero-wrap .text .subheading {
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Butonlar */
+        .hero-wrap .btn {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+    }
+        .icon img {
+        width: 60px;     /* istediğin boyut */
+        height: auto;    /* orantılı yükseklik */
+        display: block;
+        margin: 0 auto;  /* ortalamak için */
         }
 
         /* GTranslate'in oluşturduğu select kutusu ve bayrakları için */
@@ -141,6 +156,7 @@
         </div>
     </div>
 </section>
+
 <section class="services-section ftco-section">
     <div class="container">
         <div class="row justify-content-center pb-3">
@@ -153,7 +169,16 @@
         <div class="row no-gutters d-flex justify-content-center">
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="icon"><span class="flaticon-male-hair-of-head-and-face-shapes"></span></div>
+                    <div class="icon"><img src="images/womens-day.png"></div>
+                    <div class="media-body">
+                        <h3 class="heading mb-3">Hair Treatment</h3>
+                        <p>Experience our signature hair care treatment that deeply nourishes, strengthens, and restores your hair’s natural shine and vitality in just one luxurious session.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services d-block text-center">
+                    <div class="icon"><img src="images/beard.png"></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Haircut &amp; Styling</h3>
                         <p>Our expert stylists create modern, personalized cuts for every hair type.</p>
@@ -163,30 +188,10 @@
             </div>
             <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
                 <div class="media block-6 services d-block text-center">
-                    <div class="icon"><span class="flaticon-beard"></span></div>
+                    <div class="icon"><img src="images/beard-trimming.png"></div>
                     <div class="media-body">
                         <h3 class="heading mb-3">Beard</h3>
                         <p>Get your beard professionally trimmed, shaped, and styled to perfection today.</p>
-                    </div>
-                </div>
-            </div>
-            <!--
-            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-block text-center">
-                    <div class="icon"><span class="flaticon-beauty-products"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Makeup</h3>
-                        <p>Enhance your natural beauty with professional makeup for any special occasion.</p>
-
-                    </div>
-                </div>
-            </div>-->
-            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-block text-center">
-                    <div class="icon"><span class="flaticon-healthy-lifestyle-logo"></span></div>
-                    <div class="media-body">
-                        <h3 class="heading mb-3">Hair Treatment</h3>
-                        <p>Experience our signature hair care treatment that deeply nourishes, strengthens, and restores your hair’s natural shine and vitality in just one luxurious session.</p>
                     </div>
                 </div>
             </div>
@@ -360,7 +365,7 @@
                             <span class="ion-ios-book"></span>
                         </a>
                         </li>
-                        <li class="ftco-animate"><a href="https://www.instagram.com/muratfryzjer/"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/moda_fryzjer?igsh=MWVyZDhyZzhwdnN3eg==" target="_blank"><span class="icon-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
