@@ -8461,10 +8461,12 @@ h3.vr {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  text-orientation: sideways;
+  /* BURAYA EKLENDİ: Metnin bir arada kalmasını sağlar */
+  white-space: nowrap;
+  text-orientation: sideways; /* Eğer yine sorun yaşarsanız 'upright' değerini deneyin */
+  /* text-orientation: sideways; <--- BU SATIRI KALDIRIN, TEKRAR EDİYOR */
   text-align: center;
-  text-orientation: sideways;
-  margin: 0rem;
+  margin: 0rem; /* '0' da yeterlidir, '0rem' gereksizdir ancak hata vermez */
   position: absolute;
   top: 0;
   left: 0;
@@ -8475,11 +8477,14 @@ h3.vr {
   font-size: 24px;
   z-index: 1;
   color: black;
-  font-family: "Barlow Condensed", sans-serif; }
-  @media (max-width: 1199.98px) {
-    h3.vr {
-      opacity: 0;
-      display: none; } }
+  font-family: "Barlow Condensed", sans-serif;
+}
+@media (max-width: 1199.98px) {
+  h3.vr {
+    opacity: 0;
+    display: none;
+  }
+}
 
 .appointment-wrap {
   text-align: center;
