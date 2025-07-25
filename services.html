@@ -45,7 +45,7 @@
 
         /* Sayfa yüksekliği optimize edildi */
         .js-fullheight {
-            min-height: 100svh; /* height yerine min-height */
+            min-height: 100dvh; /* height yerine min-height */
             padding-top: 3rem;
             padding-bottom: 3rem;
             display: flex;
@@ -78,7 +78,6 @@
             width: 100%;
         }
     }
-
         .icon img {
         width: 60px;     /* istediğin boyut */
         height: auto;    /* orantılı yükseklik */
@@ -86,92 +85,6 @@
         margin: 0 auto;  /* ortalamak için */
         }
 
-
-        /* 1. Less padding inside each card */
-        .pricing-entry {
-            padding-top: 1rem;    /* was pb-5 */
-            padding-bottom: 1rem; /* was pb-5 */
-        }
-
-        /* 2. Tighter headings */
-        .pricing-entry h3 {
-            margin-bottom: 0.5rem;  /* tighten up below the title */
-        }
-
-        /* 3. Compact the list */
-        .pricing-entry ul {
-            margin: 0;           /* remove default UL top/bottom margins */
-            padding: 0;          /* remove default UL padding */
-            list-style: none;    /* if you don't need bullets */
-        }
-
-        .pricing-entry ul li {
-            padding: 0.25rem 0;  /* reduce space between items */
-            line-height: 1.3;    /* optional: squeeze lines closer */
-        }
-
-        /* 4. Button container: stick closer to bottom and remove extra gap */
-        .pricing-entry .button {
-            margin-top: auto;    /* keeps it bottom-aligned */
-            margin-bottom: 0.5rem; /* smaller bottom gap */
-        }
-
-        /* 5. If you still need equal-height columns, keep these: */
-        .col-md-3.d-flex.align-items-stretch .pricing-entry {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .pricing-entry {
-            display: flex;
-            flex-direction: column;
-        }
-        .pricing-entry ul {
-            flex-grow: 1;
-            margin-bottom: 1rem;
-        }
-        .pricing-entry .button {
-            margin-top: auto;
-        }
-
-        .centered-heading {
-            text-align: center;
-        }
-
-        .ftco-pricing .heading-section h2 {
-            text-align: center !important; /* Use !important only if absolutely necessary after checking other options */
-        }
-
-        .ftco-team .heading-section {
-            margin-left: auto;
-            margin-right: auto;
-            /* Optional: give it a max-width so it doesn’t stretch too wide */
-            max-width: 600px;
-        }
-
-        .carousel-team .owl-stage {
-            justify-content: center;
-        }
-
-        /* make each carousel‐item a flexbox and center all its children */
-        .carousel-team .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* (optional) force the <a.team> block to shrink‐wrap its contents */
-        .carousel-team .item .team {
-            margin: 0 auto;
-        }
-
-        .gtranslate_wrapper {
-            position: fixed !important;
-            top: 10px;
-            right: 10px;
-            z-index: 9999;
-        }
         /* GTranslate'in oluşturduğu select kutusu ve bayrakları için */
         .goog-te-gadget-simple {
             background-color: transparent !important; /* Arka planı şeffaf yap */
