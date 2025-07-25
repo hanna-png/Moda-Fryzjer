@@ -45,7 +45,7 @@
 
         /* Sayfa yüksekliği optimize edildi */
         .js-fullheight {
-            min-height: 100dvh; /* height yerine min-height */
+            min-height: 100svh; /* height yerine min-height */
             padding-top: 3rem;
             padding-bottom: 3rem;
             display: flex;
@@ -151,7 +151,6 @@
         }
 
         .carousel-team .owl-stage {
-            display: flex !important;
             justify-content: center;
         }
 
@@ -199,6 +198,12 @@
             width: auto;
             vertical-align: middle;
         }
+
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -229,7 +234,7 @@
         </div>
     </div>
 </nav>
-<section class="hero-wrap js-fullheight" style="background-image: url('images/hair_salon_pictures/black.jpeg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap js-fullheight" style="background-image: url('images/hair_salon_pictures/black.jpeg');">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -792,7 +797,7 @@
         items: 2,          // number of items to show
         loop: true,
         margin: 30,
-        autoplay: true,
+        autoplay: false,
         responsive: {
             0:   { items: 1 },
             600: { items: 2 },
