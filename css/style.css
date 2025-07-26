@@ -9019,19 +9019,7 @@ textarea.form-control {
     margin: 0 auto;
     margin-bottom: 20px;
     position: relative;
-    overflow: hidden; }
-  .team .img:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: none; /* Renk istemediğin için kaldırıldı */
-    opacity: 0;
-    pointer-events: none; /* ← Bu satır problemi çözer */
-    transition: opacity 0.3s ease;
-  }
+    overflow: visible; }
   .team h2 {
     font-size: 24px;
     font-weight: 700;
@@ -9045,8 +9033,6 @@ textarea.form-control {
     font-weight: 600; }
   .team:hover, .team:focus {
     margin-top: -10px; }
-    .team:hover .img:after, .team:focus .img:after {
-      opacity: .8; }
 
 .ftco-team {
   position: relative; }
