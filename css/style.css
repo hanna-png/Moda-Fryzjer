@@ -9020,20 +9020,18 @@ textarea.form-control {
     margin-bottom: 20px;
     position: relative;
     overflow: hidden; }
-    .team .img:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      content: '';
-      background: #bf925b;
-      opacity: 0;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+  .team .img:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: none; /* Renk istemediğin için kaldırıldı */
+    opacity: 0;
+    pointer-events: none; /* ← Bu satır problemi çözer */
+    transition: opacity 0.3s ease;
+  }
   .team h2 {
     font-size: 24px;
     font-weight: 700;
