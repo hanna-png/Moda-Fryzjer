@@ -151,6 +151,7 @@
         }
 
         .carousel-team .owl-stage {
+            display: flex !important;
             justify-content: center;
         }
 
@@ -198,12 +199,6 @@
             width: auto;
             vertical-align: middle;
         }
-
-        html, body {
-            overflow-x: hidden;
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body>
@@ -234,7 +229,7 @@
         </div>
     </div>
 </nav>
-<section class="hero-wrap js-fullheight" style="background-image: url('images/hair_salon_pictures/black.jpeg');">
+<section class="hero-wrap js-fullheight" style="background-image: url('images/hair_salon_pictures/black.jpeg');" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -794,22 +789,37 @@
     </svg>
 </div>
 
-<script src="js/jquery.min.js"></script> <script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script>
+    $('.carousel-team').owlCarousel({
+        center: true,      // ← centers the active item
+        items: 2,          // number of items to show
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        responsive: {
+            0:   { items: 1 },
+            600: { items: 2 },
+            1000:{ items: 2 }
+        }
+    });
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script> <script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/aos.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery.timepicker.min.js"></script>
 <script src="js/scrollax.min.js"></script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
-
 <script src="js/main.js"></script>
 
 <script>window.gtranslateSettings = {
@@ -818,29 +828,6 @@
     "wrapper_selector": ".gtranslate_wrapper"
 }</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-<script>
-if (window.innerWidth > 768) {
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-}
-</script>
-
-<script>
-    $('.carousel-team').owlCarousel({
-        center: true,      // ← centers the active item
-        items: 2,          // number of items to show
-        loop: true,
-        margin: 30,
-        autoplay: false,
-        responsive: {
-            0:   { items: 1 },
-            600: { items: 2 },
-            1000:{ items: 2 }
-        }
-    });
-</script>
 
 </body>
 </html>
