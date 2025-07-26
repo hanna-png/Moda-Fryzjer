@@ -9007,7 +9007,7 @@ textarea.form-control {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: auto; }
 @media (max-width: 991.98px) {
   .team {
     margin-bottom: 30px;
@@ -9021,8 +9021,36 @@ textarea.form-control {
   background: #333333;
   padding-bottom: 20px;
   border-radius: 5px;
-  overflow: visible; /* Engelleyen bir şey varsa görünür yap */
-  touch-action: pan-y; /* Scroll hareketine izin ver */
+  overflow: auto; /* Scroll aktif */
+  touch-action: pan-y; /* Dikey kaydırma izin */
+  -webkit-overflow-scrolling: touch; /* iOS için */
+}
+
+.team .img {
+  width: 100%;
+  height: 350px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  overflow: auto; /* Scroll aktif */
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  background-size: cover; /* Arkaplan resmi için */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.team .img {
+  width: 100%;
+  height: 350px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  overflow: auto; /* Scroll aktif */
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  background-size: cover; /* Arkaplan resmi için */
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .team.team-2 h2 {
