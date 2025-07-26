@@ -9008,31 +9008,56 @@ textarea.form-control {
   -ms-border-radius: 5px;
   border-radius: 5px;
   overflow: hidden; }
-  @media (max-width: 991.98px) {
-    .team {
-      margin-bottom: 30px; } }
-  .team.team-2 h2 {
-    font-size: 24px !important; }
-  .team .img {
-    width: 100%;
-    height: 350px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: visible; }
-  .team h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 0px;
-    color: #fff;
-    font-family: "Barlow Condensed", sans-serif;
-    text-transform: uppercase; }
-  .team .position {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600; }
-  .team:hover, .team:focus {
-    margin-top: -10px; }
+@media (max-width: 991.98px) {
+  .team {
+    margin-bottom: 30px;
+  }
+}
+
+.team {
+  width: 100%;
+  display: block;
+  transition: all 0.3s ease;
+  background: #333333;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  overflow: visible; /* Engelleyen bir şey varsa görünür yap */
+  touch-action: pan-y; /* Scroll hareketine izin ver */
+}
+
+.team.team-2 h2 {
+  font-size: 24px !important;
+}
+
+.team .img {
+  width: 100%;
+  height: 350px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  overflow: visible; /* Kaydırmaya engel olmasın */
+  touch-action: pan-y; /* Buradan scroll edilebilsin */
+}
+
+.team h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.team .position {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.team:hover,
+.team:focus {
+  margin-top: -10px;
+}
+
 
 .ftco-team {
   position: relative; }
