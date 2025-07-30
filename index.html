@@ -239,9 +239,9 @@
           <span class="subheading">Welcome to Moda Fryzjer & Beauty</span>
           <h1 class="mb-4">We are professional care for your hair</h1>
           <p>
-            <a href="https://modafryzjer.booksy.com/h" 
-                class="btn btn-primary btn-outline-primary px-4 py-2 notranslate" 
-                target="_blank" 
+            <a href="https://modafryzjer.booksy.com/h"
+                class="btn btn-primary btn-outline-primary px-4 py-2 notranslate"
+                target="_blank"
                 rel="noopener noreferrer">
                 Booksy
             </a>
@@ -348,9 +348,9 @@
         <div class="row justify-content-center">
             <div class="col-md-10 ftco-animate text-center">
                 <div class="form-group">
-                    <a href="https://modafryzjer.booksy.com/h" 
-                        class="btn btn-primary btn-outline-primary px-4 py-2 notranslate" 
-                        target="_blank" 
+                    <a href="https://modafryzjer.booksy.com/h"
+                        class="btn btn-primary btn-outline-primary px-4 py-2 notranslate"
+                        target="_blank"
                         rel="noopener noreferrer">
                         Booksy
                     </a>
@@ -364,7 +364,7 @@
 <section class="ftco-section ftco-team">
     <div class="container-fluid px-md-5">
         <div class="row justify-content-center pb-3">
-            <div class="col-md-10 heading-section text-center ftco-animate">                
+            <div class="col-md-10 heading-section text-center ftco-animate">
             </div>
         </div>
         <div class="row">
@@ -542,9 +542,9 @@
                         <li>Color Remover (Decapage)</li>
                     </ul>
                     <p class="button text-center">
-                        <a href="https://modafryzjer.booksy.com/h" 
-                            class="btn btn-primary px-4 py-3" 
-                            target="_blank" 
+                        <a href="https://modafryzjer.booksy.com/h"
+                            class="btn btn-primary px-4 py-3"
+                            target="_blank"
                             rel="noopener noreferrer">
                             Get Offer
                         </a>
@@ -571,9 +571,9 @@
                         <li>Color Change</li>
                     </ul>
                     <p class="button text-center">
-                        <a href="https://modafryzjer.booksy.com/h" 
-                            class="btn btn-primary px-4 py-3" 
-                            target="_blank" 
+                        <a href="https://modafryzjer.booksy.com/h"
+                            class="btn btn-primary px-4 py-3"
+                            target="_blank"
                             rel="noopener noreferrer">
                             Get Offer
                         </a>
@@ -598,9 +598,9 @@
                         <li>Wet Styling</li>
                     </ul>
                     <p class="button text-center">
-                        <a href="https://modafryzjer.booksy.com/h" 
-                            class="btn btn-primary px-4 py-3" 
-                            target="_blank" 
+                        <a href="https://modafryzjer.booksy.com/h"
+                            class="btn btn-primary px-4 py-3"
+                            target="_blank"
                             rel="noopener noreferrer">
                             Get Offer
                         </a>
@@ -624,9 +624,9 @@
                         <li>Extension Maintenance</li>
                     </ul>
                     <p class="button text-center">
-                        <a href="https://modafryzjer.booksy.com/h" 
-                            class="btn btn-primary px-4 py-3" 
-                            target="_blank" 
+                        <a href="https://modafryzjer.booksy.com/h"
+                            class="btn btn-primary px-4 py-3"
+                            target="_blank"
                             rel="noopener noreferrer">
                             Get Offer
                         </a>
@@ -648,7 +648,7 @@
             <div class="col-md-6 col-lg-7 py-5 pl-md-5">
                 <div class="py-md-5">
                     <div class="heading-section ftco-animate">
-                        <!--<span class="subheading">Testimony</span>-->    
+                        <!--<span class="subheading">Testimony</span>-->
                         <h2 class="mb-0 text text-center" >Happy Customer</h2>
                     </div>
                     <div class="carousel-testimony owl-carousel ftco-animate">
@@ -828,6 +828,17 @@
     "wrapper_selector": ".gtranslate_wrapper"
 }</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+<script>
+  function fixTranslation() {
+    document.querySelectorAll("*").forEach(function (node) {
+      if (node.children.length === 0 && node.innerText.includes("SPINKI DO MANKIETÓW")) {
+        node.innerText = node.innerText.replace("SPINKI DO MANKIETÓW", "linki");
+      }
+    });
+  }
+  setInterval(fixTranslation, 1000);
+</script>
 
 </body>
 </html>

@@ -334,6 +334,16 @@
 
   <script>window.gtranslateSettings = {"default_language":"en","languages":["en","tr","pl"],"wrapper_selector":".gtranslate_wrapper"}</script>
   <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    
+  <script>
+  function fixTranslation() {
+    document.querySelectorAll("*").forEach(function (node) {
+      if (node.children.length === 0 && node.innerText.includes("SPINKI DO MANKIETÓW")) {
+        node.innerText = node.innerText.replace("SPINKI DO MANKIETÓW", "linki");
+      }
+    });
+  }
+  setInterval(fixTranslation, 1000);
+</script>
+
   </body>
 </html>
